@@ -1,0 +1,146 @@
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>858</x><y>287</y><w>144</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+PratoBase
+--
+- descricao : String
+- tamanho  : Tamanho
+- bebida : Bebida
+--
++ getDescricao() : String
++ getPreco() : double
++ &lt;&lt;abstract&gt;&gt; getPrecoProteina() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>864</x><y>173</y><w>126</w><h>66</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+Tamanho
+--
+PEQUENO
+MEDIO
+GRANDE
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1212</x><y>263</y><w>126</w><h>48</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Prato
+--
+--
++ getDescricao() : String
++ getPreco() : double
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1518</x><y>467</y><w>126</w><h>54</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+Acrescimo
+--
+--
++ getDescricao() :String
++ getPreco() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1122</x><y>713</y><w>126</w><h>48</h></coordinates><panel_attributes>Chilli
+--
+
+--
++ getDescricao() : String
++ getPreco() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1260</x><y>713</y><w>126</w><h>48</h></coordinates><panel_attributes>CremeAlho
+--
+
+--
++ getDescricao() : String
++ getPreco() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1674</x><y>713</y><w>126</w><h>48</h></coordinates><panel_attributes>Croutons
+--
+
+--
++ getDescricao() : String
++ getPreco() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1398</x><y>713</y><w>126</w><h>48</h></coordinates><panel_attributes>ProteinaExtra
+--
+
+--
++ getDescricao() : String
++ getPreco() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1536</x><y>713</y><w>126</w><h>48</h></coordinates><panel_attributes>Shitake
+--
+
+--
++ getDescricao() : String
++ getPreco() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1812</x><y>713</y><w>126</w><h>48</h></coordinates><panel_attributes>Tofu
+--
+
+--
++ getDescricao() : String
++ getPreco() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>522</x><y>491</y><w>126</w><h>42</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Bebida
+--
+-
++&lt;&lt;abstract&gt;&gt;getPreco() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>846</x><y>527</y><w>144</w><h>42</h></coordinates><panel_attributes>Porco
+--
+--
++ getDescricao() :String
++ getprecoProteina() : double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1020</x><y>515</y><w>144</w><h>42</h></coordinates><panel_attributes>Vegano
+--
+--
++ getDescricao() :String
++ getPrecoProteina() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>684</x><y>509</y><w>144</w><h>42</h></coordinates><panel_attributes>Boi
+--
+--
++ getDescricao() :String
++ getPrecoProteina() : double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>671</y><w>126</w><h>42</h></coordinates><panel_attributes>Ko-cha
+--
+--
++getPreco() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>636</x><y>671</y><w>126</w><h>42</h></coordinates><panel_attributes>O-cha
+--
+--
++getPreco() : double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>372</x><y>671</y><w>126</w><h>42</h></coordinates><panel_attributes>Refrigerante
+--
+--
++getPreco() : double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>612</x><y>527</y><w>108</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;160;240</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>527</y><w>18</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;240</additional_attributes></element><element><id>Relation</id><coordinates><x>438</x><y>527</y><w>120</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>180;10;10;240</additional_attributes></element><element><id>Relation</id><coordinates><x>798</x><y>371</y><w>96</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;10;230</additional_attributes></element><element><id>Relation</id><coordinates><x>906</x><y>371</y><w>24</w><h>168</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;10;10;260</additional_attributes></element><element><id>Relation</id><coordinates><x>972</x><y>371</y><w>126</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;190;240</additional_attributes></element><element><id>Relation</id><coordinates><x>1194</x><y>509</y><w>336</w><h>216</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>540;10;10;340</additional_attributes></element><element><id>Relation</id><coordinates><x>1320</x><y>515</y><w>228</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>360;10;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>1464</x><y>515</y><w>108</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>1584</x><y>515</y><w>18</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>1608</x><y>515</y><w>132</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;200;330</additional_attributes></element><element><id>Relation</id><coordinates><x>1638</x><y>509</y><w>234</w><h>216</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;370;340</additional_attributes></element><element><id>Relation</id><coordinates><x>1314</x><y>305</y><w>216</w><h>192</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;340;300</additional_attributes></element><element><id>Relation</id><coordinates><x>996</x><y>293</y><w>228</w><h>18</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>360;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>438</x><y>269</y><w>126</w><h>78</h></coordinates><panel_attributes>ListaDeEspera
+--
+_- INSTANCE : const ListaDeEspera_
+- pedido : List&lt;Pedido&gt;
+--
+_+ getInstance() : ListaDeEspera_
+- ListaDeEspera()
++ addPedido(pedido : Pedido)
++ removePedido(pedido : Pedido)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>564</x><y>377</y><w>126</w><h>54</h></coordinates><panel_attributes>Pedido
+--
+- ID : const int
+_- contador : int_
+- prato : Prato
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>558</x><y>281</y><w>312</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r1=1
+r2=0..*
+</panel_attributes><additional_attributes>10;20;500;20</additional_attributes></element><element><id>Relation</id><coordinates><x>624</x><y>365</y><w>246</w><h>138</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r1=1
+r2=1</panel_attributes><additional_attributes>390;10;210;110;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>894</x><y>233</y><w>24</w><h>66</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+r2=1</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1332</x><y>275</y><w>240</w><h>204</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r2=1
+r1=0..*</panel_attributes><additional_attributes>360;320;360;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>287</y><w>18</w><h>102</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>18</x><y>119</y><w>126</w><h>42</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Observer
+--
+--
++update() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>395</y><w>126</w><h>48</h></coordinates><panel_attributes>Cliente
+--
+- nome : String
+- pedido : Pedido
+--
++update()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>138</x><y>131</y><w>210</w><h>24</h></coordinates><panel_attributes>lt=&lt;-
+r1=0..*
+r2=1</panel_attributes><additional_attributes>10;20;330;20</additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>155</y><w>18</w><h>252</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;400</additional_attributes></element><element><id>UMLClass</id><coordinates><x>336</x><y>119</y><w>156</w><h>78</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Observable
+--
+-observers : List&lt;Observer&gt;
+- state : int
+--
++ notifyAllObserver() : String
++ addObserver(observer : Observer)
++ removeOberserver(observer : Observer)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>456</x><y>191</y><w>18</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>119</y><w>126</w><h>114</h></coordinates><panel_attributes>Balanco
+--
+_- INSTANCE : const Balanco_
+- pedidos : List&lt;Pedido&gt;
+--
+_+ getInstance() : Balanco_
+- Balanco()
++ addPedidio(pedido : Pedido)
++ removePedido(pedido : Pedido)
++ exibirPedidos() : String
++ getQuantidadePedidos() : int 
++ getReceitaTotal() : double 
++ getTicketMedio() : double 
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>546</x><y>227</y><w>96</w><h>54</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>140;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>395</y><w>456</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r1=1
+r2=1
+</panel_attributes><additional_attributes>10;20;740;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1614</x><y>521</y><w>132</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;200;330</additional_attributes></element></diagram>

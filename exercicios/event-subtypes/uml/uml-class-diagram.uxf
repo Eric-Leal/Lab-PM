@@ -1,0 +1,159 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notesTicketevent: Event=</help_text><element><id>Relation</id><coordinates><x>1584</x><y>344</y><w>224</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;11;260;230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>768</x><y>224</y><w>208</w><h>120</h></coordinates><panel_attributes>Stream
+--
+_+MAX_EVENTS : const int = 100_
+--
++ publish(event: Event)
++ consume() : Sale
++ get() : Sale
++ removeAll()
++ size() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>856</x><y>336</y><w>88</w><h>272</h></coordinates><panel_attributes>lt=&lt;-
+m1=  0..*
+m2=1
+é publicado &gt;</panel_attributes><additional_attributes>10;320;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1520</x><y>224</y><w>208</w><h>128</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+EventConsumer
+--
+_+ MAX_EVENTS : int = 1000_
+- eventsConsumed : int
+--
++ &lt;&lt;abstract&gt;&gt; updateStatistics(event : Event)
++ &lt;&lt;abstract&gt;&gt; percentEvent(identifier String)
++ &lt;&lt;abstract&gt;&gt; modeEvent()
++ percentEvent(origin : String) : float
++ modeEvent() : String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>968</x><y>280</y><w>568</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
+&lt; consome
+r1=1
+r2= 0..*</panel_attributes><additional_attributes>10;20;690;21</additional_attributes></element><element><id>Relation</id><coordinates><x>952</x><y>320</y><w>584</w><h>288</h></coordinates><panel_attributes>lt=&lt;-
+&lt; consome
+r1=0..*
+r2= 0..*</panel_attributes><additional_attributes>10;340;710;11</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1072</x><y>784</y><w>112</w><h>88</h></coordinates><panel_attributes>Ticket
+--
+- event: String
+- address: String
+- value : float
+- date : LocalDate
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>792</x><y>592</y><w>168</w><h>64</h></coordinates><panel_attributes>Event
+--
+_- counter: int_
+- id: int
+- timestamp: LocalDateTime
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>952</x><y>784</y><w>112</w><h>88</h></coordinates><panel_attributes>Sale
+--
+- description : String
+- origin : String
+- value : float
+- date : LocalDate
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1080</x><y>600</y><w>168</w><h>48</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+EventBody
+--
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>952</x><y>616</y><w>144</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1= 1
+m2= 1
+r2=body
+
+</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>376</x><y>200</y><w>272</w><h>296</h></coordinates><panel_attributes>StreamMonitor
+--
+_+ MAX_PROCESSED : int = 1000_
+_+ MAX_TYPES : int = 1000_
+- eventCount: int
+- eventTypes : string[]
+- eventTypeCount: int[]
+- typeCount : int
+- startTime: LocalDateTime
+- endTime : LocalDateTIme
+- processedCount : int
+- mostFrequentType : String
+- processingRate : double
+--
++ startMonitoring()
++ stopMonitoring()
++ getEventTypeCount(eventType:String): int
++ plotEventDistribution():
++ recordProcessedEvent(processedEvent : ProcessedEvent)
++ recordEvent(event : Event)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>264</y><w>144</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+&lt; possui 
+r1=1
+m2=0..1</panel_attributes><additional_attributes>160;20;11;21</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1528</x><y>528</y><w>200</w><h>256</h></coordinates><panel_attributes>SaleConsumer
+--
+- minValue : int
+- maxValue : int
+- totalValue : int
+- identifiersKeys : String[]
+- identifiesCount : Integer[]
+- identifierSize : int
+- attributeKeys : String[]
+- attributeCount : Integer[]
+- attributeSize : int
+--
++ maxValue() : float
++ minValue() : float
++ avgValue() : float
++ updateStatistics(event : Event)
++ percentEvent(identifier : String) : float
++ modeEvent() : String
++ validateEventsConsumed()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1744</x><y>528</y><w>200</w><h>256</h></coordinates><panel_attributes>TicketConsumer
+--
+- minValue : int
+- maxValue : int
+- totalValue : int
+- identifiersKeys : String[]
+- identifiesCount : Integer[]
+- identifierSize : int
+- attributeKeys : String[]
+- attributeCount : Integer[]
+- attributeSize : int
+--
++ maxValue() : float
++ minValue() : float
++ avgValue() : float
++ updateStatistics(event : Event)
++ percentEvent(identifier : String) : float
++ modeEvent() : String
++ validateEventsConsumed()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1528</x><y>344</y><w>112</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;11;120;230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1192</x><y>784</y><w>136</w><h>88</h></coordinates><panel_attributes>Subscription
+--
+- subscriptionName: String
+- monthlyValue: float 
+- subscriberName: String
+- startDate : LocalDate
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1216</x><y>640</y><w>48</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;40;180</additional_attributes></element><element><id>Relation</id><coordinates><x>1016</x><y>640</y><w>104</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>110;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>1120</x><y>640</y><w>56</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>50;10;10;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1960</x><y>528</y><w>200</w><h>256</h></coordinates><panel_attributes>SubscriptionConsumer
+--
+- minValue : int
+- maxValue : int
+- totalValue : int
+- identifiersKeys : String[]
+- identifiesCount : Integer[]
+- identifierSize : int
+- attributeKeys : String[]
+- attributeCount : Integer[]
+- attributeSize : int
+--
++ maxValue() : float
++ minValue() : float
++ avgValue() : float
++ updateStatistics(event : Event)
++ percentEvent(identifier : String) : float
++ modeEvent() : String
++ validateEventsConsumed()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1696</x><y>344</y><w>368</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;11;440;230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>240</y><w>208</w><h>80</h></coordinates><panel_attributes>DistributionPlot
+--
+- dataset : DefaultCategoryDataset
+- chart : JFreeChart
+--
++ setData(List&lt;String&gt;, List&lt;Integer&gt;)
++ show()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>576</y><w>208</w><h>88</h></coordinates><panel_attributes>ProcessedEvent
+--
+- eventId : id
+- eventType : String
+- eventTimestamp : LocalDate
+- timestamp : LocalDate
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>488</x><y>488</y><w>32</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1= 1
+m2= *
+
+</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>312</y><w>184</w><h>312</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;instanciate&gt;&gt;</panel_attributes><additional_attributes>10;370;210;10</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>264</y><w>192</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;show&gt;&gt;</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element></diagram>

@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AplicacaoGameTracker",
+            "request": "launch",
+            "mainClass": "br.lpm.main.AplicacaoGameTracker",
+            "projectName": "event-subtypes"
+        },
+        {
+            "type": "java",
+            "name": "AplicacaoEvents",
+            "request": "launch",
+            "mainClass": "br.lpm.main.AplicacaoEvents",
+            "projectName": "event-subtypes"
+        },
+        {
+            "type": "java",
+            "name": "AplicacaoRamen",
+            "request": "launch",
+            "mainClass": "br.lpm.main.AplicacaoRamen",
+            "projectName": "event-subtypes"
+        }
+    ]
+}

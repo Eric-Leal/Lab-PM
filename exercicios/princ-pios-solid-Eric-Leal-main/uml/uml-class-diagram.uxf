@@ -1,0 +1,103 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>711</x><y>468</y><w>189</w><h>90</h></coordinates><panel_attributes>Player
+--
+- name : String
+- id : int
+_- idCounter : int_
+- playerScore : PlayerScore
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1062</x><y>216</y><w>189</w><h>90</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Game
+--
+- scoringRule : ScoringRule
+--
++&lt;&lt;abstract&gt;&gt;getName()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1548</x><y>225</y><w>315</w><h>63</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ScoringRule
+--
+--
++calculateScore(matchResult : String, scoreInMatch : int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>711</x><y>216</y><w>189</w><h>108</h></coordinates><panel_attributes>GameSession
+--
+- game : Game
+- player : Player
+- result : Result
+- scoreInMatch : int
+--
++recordScore()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>936</x><y>387</y><w>189</w><h>54</h></coordinates><panel_attributes>DiceGame
+--
+- diceSize : int
+--
++getName()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1053</x><y>459</y><w>189</w><h>45</h></coordinates><panel_attributes>CardGame
+--
+--
++getName()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1422</x><y>387</y><w>297</w><h>63</h></coordinates><panel_attributes>DiceGameScoringRule
+--
+--
++calculateScore(matchResult : String, scoreInMatch : int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1494</x><y>279</y><w>99</w><h>126</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>90;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>378</y><w>189</w><h>54</h></coordinates><panel_attributes>FootballGame
+--
+--
++getName()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1017</x><y>297</y><w>90</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1134</x><y>297</y><w>27</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>1206</x><y>297</y><w>81</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1575</x><y>477</y><w>297</w><h>63</h></coordinates><panel_attributes>CardGameScoringRule
+--
+--
++calculateScore(matchResult : String, scoreInMatch : int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1791</x><y>387</y><w>270</w><h>63</h></coordinates><panel_attributes>FootballGameScoringRule
+--
+--
++calculateScore(matchResult : String, scoreInMatch : int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1728</x><y>279</y><w>27</w><h>216</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>1818</x><y>279</y><w>108</w><h>126</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;100;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1242</x><y>234</y><w>324</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r1= 1
+r2= 1</panel_attributes><additional_attributes>10;20;340;20</additional_attributes></element><element><id>Relation</id><coordinates><x>891</x><y>243</y><w>189</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r1= 1
+r2= 1</panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>315</y><w>36</w><h>171</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r2= 1
+r1=*</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>441</x><y>477</y><w>189</w><h>90</h></coordinates><panel_attributes>PlayerManager
+--
+- players : List&lt;Player&gt;
+--
++addPlayer(player : Player)
++getPlayerById(id : int) : Player
++getAllPlayers(): List&lt;Player&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>693</x><y>693</y><w>261</w><h>126</h></coordinates><panel_attributes>PlayerScore
+--
+- scoresByGame : Map&lt;String, Integer&gt;
+--
++addScore(gameName : String, score: int )
++getAllScores(): Map&lt;String, Integer&gt;
++getScore(gameName : String) : int
++hasPlayedGame(gameName : String) : boolean
++ getTotalScore(): int
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1017</x><y>0</y><w>270</w><h>90</h></coordinates><panel_attributes>GameManager
+--
+- games: List&lt;Game&gt;
+--
++addGame( game : Game)
++getGameByName(name : String) : Game
++getAllGames(): List&lt;Game&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>549</y><w>72</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+r1=1
+r2=0..1
+possui &gt;
+</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>621</x><y>495</y><w>108</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r2= *
+r1= 1</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1143</x><y>81</y><w>36</w><h>153</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r1= 1
+r2= *</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>468</y><w>333</w><h>90</h></coordinates><panel_attributes>RankingService
+--
+- playerManager: PlayerManager
+--
++getRankedPlayersByGame( gameName : String) : List&lt;Player&gt;
++getPlayerById(id : int): Player
++getPlayerScores(player : Player) : Map&lt;String, Integer&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>36</x><y>261</y><w>252</w><h>90</h></coordinates><panel_attributes>StatisticReporter
+--
+- rankingService : RankingService
+--
++displayRankings( gameName : String) : String
++displayPlayerStats( id : int) : String
++getTotalScore(player: Player):int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>144</x><y>342</y><w>54</w><h>144</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1
+usa &gt;</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>324</x><y>504</y><w>135</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2= 1
+</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element></diagram>

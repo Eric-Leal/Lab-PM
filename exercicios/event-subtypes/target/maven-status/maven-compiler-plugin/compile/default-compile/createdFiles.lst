@@ -1,0 +1,15 @@
+br\lpm\business\EventBody.class
+br\lpm\business\Ticket.class
+br\lpm\business\DistributionPlot.class
+br\lpm\business\StreamMonitor.class
+br\lpm\business\TicketConsumer.class
+br\lpm\business\Event.class
+br\lpm\business\SaleConsumer.class
+br\lpm\business\ProcessedEvent.class
+br\lpm\main\AplicacaoEvents.class
+br\lpm\business\Subscription.class
+br\lpm\business\Stream.class
+br\lpm\business\SubscriptionConsumer.class
+br\lpm\business\EventConsumer.class
+br\lpm\business\Sale.class
+br\lpm\main\BarChart.class
